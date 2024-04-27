@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>L'ordinateur</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	background-color: #CCC;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	text-decoration: underline;
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+	font-weight: bold;
+	font-size: x-large;
+	color: #F00;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+
+/* ~~ este contenedor rodea a todas las demás divs, lo que les asigna su anchura basada en porcentaje ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* puede que sea conveniente una anchura máxima (max-width) para evitar que este diseño sea demasiado ancho en un monitor grande. Esto mantiene una longitud de línea más legible. IE6 no respeta esta declaración. */
+	min-width: 780px;/* puede que sea conveniente una anchura mínima (min-width) para evitar que este diseño sea demasiado estrecho. Esto permite que la longitud de línea sea más legible en las columnas laterales. IE6 no respeta esta declaración. */
+	background-color: #FFF;
+	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño. No es necesario si establece la anchura de .container en el 100%. */
+}
+
+/* ~~no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado~~ */
+.header {
+	background-color: #6F7D94;
+}
+
+/* ~~ Esta es la información de diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #6F7D94;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.header1 {	background-color: #00CC99;
+	font-size: 200%;
+}
+.header .header1 table tr td {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 250%;
+	text-align: center;
+	color: #000;
+}
+.ddf {	color: #F00;
+}
+.content table tr td .ddf {
+	text-align: center;
+}
+.content table tr td .ddf {
+	text-align: center;
+}
+td .ddf {
+	text-align: center;
+}
+.content table tr td .ddf {
+	text-align: center;
+}
+table tr td {
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+	font-size: x-large;
+	color: #F00;
+}
+.ffp {
+	font-weight: bold;
+	color: #000;
+	font-size: medium;
+}
+.content table tr td table tr td {
+	font-size: medium;
+	color: #000;
+	text-align: center;
+}
+.content table tr td table tr td p {
+	color: #000;
+}
+.content table tr td table tr td p {
+	color: #000;
+}
+.content table tr td table tr td p {
+	font-size: medium;
+}
+.content table tr td table tr td a {
+	color: #000;
+}
+-->
+</style></head>
+
+<body>
+
+<div>
+  <div class="header"><!-- end .header -->
+    <div class="header1">
+      <!-- end .header -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="30%"><img src="download__1_-removebg-preview.png" width="207" height="192" alt="vvvcccbb" /></td>
+          <td width="70%">L'ordinateur</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="content">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="133"><p>I) Definition</p>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="72%"><p><span class="ffp">un dispositif électronique programmable capable d'effectuer des opérations logiques et arithmétiques complexes, de stocker et d'accéder à des données, ainsi que de communiquer avec d'autres ordinateurs ou dispositifs via des réseaux. En termes simples, un ordinateur est une machine qui traite des informations selon des instructions données, ce qui lui permet d'exécuter une grande variété de tâches, depuis la simple manipulation de chiffres jusqu'à des calculs très complexes, en passant par l'exécution de programmes logiciels et la création de contenu multimédia.</span></p></td>
+              <td width="28%"><img src="ord 1.jpeg" width="270" height="187" alt="GGH" /></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="122"><p>II) les dangers de l'ordinateur</p>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="33%"><img src="ord 2.jpeg" width="294" height="171" alt="GG" /></td>
+              <td width="67%"><p>Les ordinateurs présentent des risques tels que la sécurité informatique, la dépendance, les problèmes de santé, la perte de vie privée, l'impact environnemental, la propagation de fausses informations et la cyberintimidation. Pour atténuer ces risques, il est essentiel d'adopter des pratiques de sécurité appropriées, de promouvoir une utilisation équilibrée et responsable de la technologie, et de sensibiliser les utilisateurs aux défis associés à son utilisation.</p></td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr>
+        <td height="133"><p>III) L'inventeur de l'ordinateur</p>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="76%"><p><a data-tg-citations="1;2;3;4" target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=20bb1dc33b7d05c9JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE0Ng&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly9ib3Vsb3RtYWcuZnIvaW5mb3JtYXRpcXVlL3ByZW1pZXJzLW9yZGluYXRldXJzLw&amp;ntb=1" h="ID=SERP,6146.1" data-tgpsgid="d_anstgsen0">L'inventeur de l'ordinateur est un mathématicien anglais nommé <strong>Charles Babbage</strong> qui a conçu le concept de la première machine à calculer programmable entre 1833 et 1837</a><a target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=0a71eb41599b9445JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE0Nw&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly9ib3Vsb3RtYWcuZnIvaW5mb3JtYXRpcXVlL3ByZW1pZXJzLW9yZGluYXRldXJzLw&amp;ntb=1" h="ID=SERP,6147.1" data-tgpsgid="d_anstgpsg1">1</a><a target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=59090d06e20f836cJmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE0OA&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cuaGlzdG9pcmUtcG91ci10b3VzLmZyL2ludmVudGlvbnMvMjk4LWludmVudGlvbi1vcmRpbmF0ZXVyLmh0bWw&amp;ntb=1" h="ID=SERP,6148.1" data-tgpsgid="d_anstgpsg2">2</a><a target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=68ba11aed74cb2e9JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE0OQ&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cudmVyaXNtaWMuZnIvaW52ZW50aW9uLW9yZGluYXRldXIv&amp;ntb=1" h="ID=SERP,6149.1" data-tgpsgid="d_anstgpsg3">3</a><a target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=7a17ec6d63509767JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE1MA&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly9jb21tZW50b3V2cmlyLmNvbS9ibG9nL3F1aS1hLWludmVudGUtbGUtcHJlbWllci1vcmRpbmF0ZXVyLWR1LW1vbmRlLw&amp;ntb=1" h="ID=SERP,6150.1" data-tgpsgid="d_anstgpsg4">4</a>. <a data-tg-citations="2" target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=b5c36dee1bd06e58JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE1MQ&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cuaGlzdG9pcmUtcG91ci10b3VzLmZyL2ludmVudGlvbnMvMjk4LWludmVudGlvbi1vcmRpbmF0ZXVyLmh0bWw&amp;ntb=1" h="ID=SERP,6151.1" data-tgpsgid="d_anstgsen1">Il s'est appuyé sur les travaux de Blaise Pascal et a introduit le principe de programmation par cartes perforées</a><a target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=ac225a3f2eb7d517JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE1Mg&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cuaGlzdG9pcmUtcG91ci10b3VzLmZyL2ludmVudGlvbnMvMjk4LWludmVudGlvbi1vcmRpbmF0ZXVyLmh0bWw&amp;ntb=1" h="ID=SERP,6152.1" data-tgpsgid="d_anstgpsg2">2</a>. <a data-tg-citations="3" target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=6d1305a8caf7e30fJmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE1Mw&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cudmVyaXNtaWMuZnIvaW52ZW50aW9uLW9yZGluYXRldXIv&amp;ntb=1" h="ID=SERP,6153.1" data-tgpsgid="d_anstgsen2">Son fils Henry Babbage a construit une version simplifiée de sa machine analytique</a><a target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=9bcbf78a05914c58JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE1NA&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cudmVyaXNtaWMuZnIvaW52ZW50aW9uLW9yZGluYXRldXIv&amp;ntb=1" h="ID=SERP,6154.1" data-tgpsgid="d_anstgpsg3">3</a>. <a data-tg-citations="5" target="_blank" href="https://www.bing.com/ck/a?!&amp;&amp;p=606e648466977262JmltdHM9MTcxMTc1NjgwMCZpZ3VpZD0xZWRjMGE3NS04YWI0LTYyOWMtMzM1Ny0xOWE2OGJmMjYzMDcmaW5zaWQ9NjE1NQ&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=1edc0a75-8ab4-629c-3357-19a68bf26307&amp;psq=l%27inventeur+de+l%27ordinateur&amp;u=a1aHR0cHM6Ly93d3cuY2FtaW50ZXJlc3NlLmZyL3NvY2lldGUvcXVpLWEtaW52ZW50ZS1sb3JkaW5hdGV1ci0xMTExODYwNS8&amp;ntb=1" h="ID=SERP,6155.1" data-tgpsgid="d_anstgsen3">Le premier ordinateur électronique, pesant 30 tonnes et composé de 19 000 tubes, a été inventé par John Presper Eckert et John William Mauchly en 1946</a></p></td>
+              <td width="24%"><img src="ord 3.jpeg" width="196" height="257" alt="SHIK" /></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="128"><p>IV) L'histoir</p>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="1%">&nbsp;</td>
+              <td width="99%"><p>L'histoire de l'ordinateur est une saga fascinante qui remonte à plusieurs siècles. Voici un aperçu succinct de son évolution : </p>
+                <ol>
+                  <li>
+                    <p><strong>Les débuts théoriques (17ème - 19ème siècle) :</strong> Les concepts fondamentaux de l'ordinateur ont émergé bien avant l'avènement de la technologie moderne. Des penseurs tels que Blaise Pascal et Gottfried Wilhelm Leibniz ont contribué à développer des dispositifs mécaniques pour effectuer des calculs, comme les premières machines à calculer.</p>
+                  </li>
+                  <li>
+                    <p><strong>L'invention de l'ordinateur programmable (20ème siècle) :</strong> En 1837, Charles Babbage conçoit la première machine à calculer programmable, la &quot;machine analytique&quot;. Bien que cette machine n'ait jamais été achevée pendant sa vie, elle est considérée comme un précurseur de l'ordinateur moderne.</p>
+                  </li>
+                  <li>
+                    <p><strong>Les premiers calculateurs électroniques (années 1940) :</strong> Pendant la Seconde Guerre mondiale, des progrès significatifs ont été réalisés dans le domaine des calculateurs électroniques. Des machines telles que le Colossus en Grande-Bretagne et l'ENIAC aux États-Unis ont été développées pour effectuer des calculs complexes, aidant ainsi aux efforts de guerre.</p>
+                  </li>
+                  <li>
+                    <p><strong>L'avènement des ordinateurs personnels (années 1970) :</strong> Les années 1970 ont vu l'émergence des premiers ordinateurs personnels, tels que l'Altair 8800. Ces machines ont ouvert la voie à une utilisation plus répandue de la technologie informatique dans les foyers et les petites entreprises.</p>
+                  </li>
+                  <li>
+                    <p><strong>L'ère de l'informatique moderne (années 1980 - aujourd'hui) :</strong> Les décennies suivantes ont été marquées par des avancées rapides dans la puissance de calcul, la miniaturisation et l'accessibilité des ordinateurs. L'invention d'Internet dans les années 1990 a révolutionné la façon dont les ordinateurs communiquent et partagent des informations à travers le monde.</p>
+                  </li>
+                  <li>
+                    <p><strong>L'avènement de l'intelligence artificielle (années 2000 - aujourd'hui) :</strong> Ces dernières années ont été marquées par des progrès spectaculaires dans le domaine de l'intelligence artificielle et de l'apprentissage automatique, exploitant la puissance de calcul des ordinateurs pour résoudre des problèmes complexes dans des domaines tels que la reconnaissance vocale, la vision par ordinateur et la prise de décision autonome.</p>
+                  </li>
+                </ol>
+              <p>L'histoire de l'ordinateur est une histoire de progrès incessants, d'innovation et de transformation radicale de la société à travers le monde.</p></td>
+            </tr>
+          </table>
+        <p>&nbsp;</p></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="43%" height="25"><a href="index.html">Page principal</a></td>
+        <td width="30%"><a href="Divers.html">Divers</a></td>
+        <td width="27%"><a href="l'ordinateur.html">Retour</a></td>
+      </tr>
+    </table>
+    <p><a href="Divers.html.dwt"></a></p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

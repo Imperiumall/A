@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jeu amusant</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #CCC;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	text-decoration: underline;
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+	text-align: justify;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* ~~ este contenedor rodea a todas las demás divs, lo que les asigna su anchura basada en porcentaje ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* puede que sea conveniente una anchura máxima (max-width) para evitar que este diseño sea demasiado ancho en un monitor grande. Esto mantiene una longitud de línea más legible. IE6 no respeta esta declaración. */
+	min-width: 780px;/* puede que sea conveniente una anchura mínima (min-width) para evitar que este diseño sea demasiado estrecho. Esto permite que la longitud de línea sea más legible en las columnas laterales. IE6 no respeta esta declaración. */
+	background-color: #FFF;
+	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño. No es necesario si establece la anchura de .container en el 100%. */
+}
+
+/* ~~no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado~~ */
+.header {
+	background-color: #33CC99;
+	font-size: 500%;
+	text-align: center;
+}
+
+/* ~~ Esta es la información de diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+	font-size: 120%;
+	text-align: left;
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #6F7D94;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.header table tr td {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	font-size: 500%;
+}
+.content ul li strong em {
+	font-size: 170%;
+	color: #F00;
+}
+.header table tr td strong em strong em .header {
+	font-size: 100%;
+}
+.HH {
+	text-align: left;
+}
+.content p style {
+	text-align: center;
+}
+.content ul ul li {
+	color: #F00;
+	font-size: 120%;
+}
+.content ol ol li strong {
+	font-size: 100px;
+}
+.content ol ol li strong {
+	font-size: 50px;
+}
+.content ol ol li strong {
+	font-size: 20px;
+}
+.content ol ol li strong {
+	font-size: 10px;
+}
+.content ol ol li strong {
+	font-size: 20px;
+}
+.S {
+	font-weight: bold;
+}
+.content ul ul {
+	font-weight: bold;
+	font-style: italic;
+	font-size: medium;
+}
+.content ul blockquote p strong {
+	font-weight: bold;
+	font-style: italic;
+	color: #F00;
+}
+-->
+</style></head>
+
+<body>
+
+<div>
+  <div class="header"><!-- end .header --><strong class="HH"><em> Les jeux</em></strong></div>
+  <div class="content">
+    <h1>Tic tac toe :</h1>
+    <p><span lang="fr" xml:lang="fr"><span jscontroller="BicQqd" jsname="XtloMb">Le <strong>tic-tac-toe</strong>, aussi appelé « <span jsaction="click:sKUsF" role="tooltip" tabindex="0"><span jsname="d6wfac" data-enable-toggle-animation="true" data-extra-container-classes="ZLo7Eb" data-hover-hide-delay="1000" data-hover-open-delay="500" data-send-open-event="true" data-theme="0" data-width="250" role="button" tabindex="0" jsaction="vQLyHf" jsslot="" data-ved="2ahUKEwiS3prJjJ-FAxUJ_rsIHX_8B6cQmpgGegQIIBAD"><span jsname="ukx3I" data-bubble-link="" data-segment-text="morpion">morpion</span></span></span> » (par analogie avec le jeu de <strong>morpion</strong>) et « oxo » en Belgique, est un jeu de réflexion se pratiquant à deux</span></span></p>
+    <p><span lang="fr" xml:lang="fr"><span jscontroller="BicQqd" jsname="XtloMb">joueurs, tour par tour, dont le but est de créer le premier un alignement.</span></span></p>
+    <p><br />
+    Pour jouer au jeu de Tic Tac Toe (ou Morpion), voici les règles de base :</p>
+    <ol>
+      <ol>
+        <li><strong>Le jeu se joue sur une grille de 3x3 cases.</strong></li>
+        <li><strong>Deux joueurs s'affrontent, l'un utilisant des croix (X) et l'autre des ronds (O).</strong></li>
+        <li><strong>Les joueurs jouent à tour de rôle en plaçant leur symbole dans une case vide de la grille.</strong></li>
+        <li><strong>Le premier joueur à aligner trois de ses symboles horizontalement, verticalement ou diagonalement gagne la partie.</strong></li>
+        <li><strong>Si la grille est remplie sans qu'aucun joueur n'ait aligné trois symboles, la partie est déclarée nulle (match nul).</strong></li>
+        <li><strong>Les joueurs doivent également respecter les règles de base de jeu équitable, comme ne pas déplacer le symbole de l'adversaire ou ne pas modifier les symboles déjà placés sur la grille.</strong><strong></strong></li>
+      </ol>
+    </ol>
+    <p>Ces règles simples font du <span class="S">Tic Tac Toe</span> un jeu classique et facile à apprendre, mais qui offre également des stratégies intéressantes pour les joueurs plus expérimentés.</p>
+    <p>&nbsp;</p>
+    <ul>
+      <blockquote>
+        <p><strong><em>pratice</em></strong> (morpion)</p>
+      </blockquote>
+    </ul>
+     <style>
+  table {
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-size: 24px;
+  }
+  th, td {
+    cursor: pointer;
+  }
+    </style>
+    <table id="ticTacToe">
+      <tr>
+    <td onclick="play(0, 0)"></td>
+    <td onclick="play(0, 1)"></td>
+    <td onclick="play(0, 2)"></td>
+  </tr>
+  <tr>
+    <td onclick="play(1, 0)"></td>
+    <td onclick="play(1, 1)"></td>
+    <td onclick="play(1, 2)"></td>
+  </tr>
+  <tr>
+    <td onclick="play(2, 0)"></td>
+    <td onclick="play(2, 1)"></td>
+    <td onclick="play(2, 2)"></td>
+  </tr>
+</table>
+
+<script>
+let currentPlayer = 'X';
+let board = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+function play(row, col) {
+  if (!board[row][col]) {
+    board[row][col] = currentPlayer;
+    document.getElementById('ticTacToe').rows[row].cells[col].innerText = currentPlayer;
+    checkWinner();
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+  }
+}
+
+function checkWinner() {
+  // Check rows
+  for (let i = 0; i < 3; i++) {
+    if (board[i][0] && board[i][0] === board[i][1] && board[i][0] === board[i][2]) {
+      alert(board[i][0] + ' wins!');
+      return;
+    }
+  }
+  // Check columns
+  for (let i = 0; i < 3; i++) {
+    if (board[0][i] && board[0][i] === board[1][i] && board[0][i] === board[2][i]) {
+      alert(board[0][i] + ' wins!');
+      return;
+    }
+  }
+  // Check diagonals
+  if (board[0][0] && board[0][0] === board[1][1] && board[0][0] === board[2][2]) {
+    alert(board[0][0] + ' wins!');
+    return;
+  }
+  if (board[0][2] && board[0][2] === board[1][1] && board[0][2] === board[2][0]) {
+    alert(board[0][2] + ' wins!');
+    return;
+  }
+}
+</script><!-- end .content --></div>
+    <p>&nbsp;</p>
+  </div>
+  <div class="footer">
+    <ol>
+      
+      <ol>
+          
+        <ol>
+              
+          <ol>
+                  
+            <ol>
+                      
+              <ol>
+                          <blockquote>
+                            <p>
+                              <!-- end .footer --><a href="index.html">page principale</a></p>
+</blockquote>
+              </ol>
+            </ol>
+          </ol>
+        </ol>
+      </ol>
+    </ol>
+  </div>
+  <!-- end .container --></div>
+</body>
+</html>
